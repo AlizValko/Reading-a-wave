@@ -1,0 +1,167 @@
+@keyframes dryingSand{
+    0% {color: #605a48;}
+    100% {color: #988e70;}
+}
+@keyframes wave {
+    0% {
+    background-position-x: 0%;
+    }
+    100% {
+    background-position-x: 1000px;
+    }
+}
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+h1,h2,h3,p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:#bddfd6;
+}
+h1{
+    font-family: verveine, sans-serif;
+    font-style: normal;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 20%;
+    color: #988e70;
+    text-align: center;
+    z-index: 0;
+    animation-name: dryingSand;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 3.2s;
+}
+#shore{
+    background-color: #988e70;
+    width: 100%;
+    height: 68vh;
+    padding-top: 160px;
+    z-index: -1;
+}
+
+.water{
+    background-image: linear-gradient(#0e555f, #222e30);
+    z-index: -1;
+}
+
+.wave {
+    background-image: url(waveSvg.svg);
+    background-repeat: repeat-x;
+    background-size: 1000px auto;
+    background-position: bottom;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 600px;
+    z-index: 99;
+    animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+.wave2 {
+    background-image: url(waveSvg.svg);
+    background-repeat: repeat-x;
+    background-size: 1000px auto;
+    background-position: bottom;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 600px;
+    opacity: 0.5;
+    z-index: 98;
+    animation: wave 8s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    animation-delay: 1s;
+}
+.wave3 {
+    background-image: url(waveSvg.svg);
+    background-repeat: repeat-x;
+    background-size: 1000px auto;
+    background-position: bottom;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 600px;
+    opacity: 0.5;
+    z-index: 98;
+    animation: wave 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    animation-delay: -1s;
+}
+#one{
+    animation-name: dryingSand;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 3.2s;
+}
+#two{
+    animation-name: dryingSand;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 3.6s;
+}
+#three{
+    animation-name: dryingSand;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 4s;
+}
+#four{
+    animation-name: dryingSand;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 4.4s;
+}
+#five{
+    animation-name: dryingSand;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 4.8s;
+}
+#six{
+    animation-name: dryingSand;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 5.2s;
+}
+#seven{
+    animation-name: dryingSand;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 5.6s;
+}
+.text{
+    padding: 15px 90px;
+    margin: 0;
+    width: 40%;
+}
+p{
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    text-align: right;
+    padding-right: 5%;
+}
+.button{
+    text-decoration: none;
+    color: #b1fcdf;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    transition: all 0.3s ease-out;
+    background: #222e30;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
