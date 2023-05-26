@@ -34,21 +34,31 @@ h1{
     animation-iteration-count: infinite;
     animation-delay: 3.2s;
 }
+a{
+    text-decoration: none;
+}
 #shore{
     background-color: #988e70;
     width: 100%;
     height: 68vh;
     padding-top: 160px;
-    z-index: -1;
+    /*z-index: -1;*/
 }
 
 .water{
     background-image: linear-gradient(#0e555f, #222e30);
-    z-index: -1;
+    /*z-index: -1;*/
 }
-
+.menu{
+    background-color: #988e70;
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    height: 200px;
+    width: 20px;
+}
 .wave {
-    background-image: url(waveSvg.svg);
+    background-image: url(wave.svg);
     background-repeat: repeat-x;
     background-size: 1000px auto;
     background-position: bottom;
@@ -60,7 +70,7 @@ h1{
     animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
 }
 .wave2 {
-    background-image: url(waveSvg.svg);
+    background-image: url(wave.svg);
     background-repeat: repeat-x;
     background-size: 1000px auto;
     background-position: bottom;
@@ -74,7 +84,7 @@ h1{
     animation-delay: 1s;
 }
 .wave3 {
-    background-image: url(waveSvg.svg);
+    background-image: url(wave.svg);
     background-repeat: repeat-x;
     background-size: 1000px auto;
     background-position: bottom;
@@ -129,10 +139,39 @@ h1{
     animation-iteration-count: infinite;
     animation-delay: 5.6s;
 }
-.text{
+#par2, #par4, #par6{
+    padding: 15px 300px;
+    margin: 0;
+    width: 40%;
+}
+#par1, #par3, #par5{
     padding: 15px 90px;
     margin: 0;
     width: 40%;
+}
+.nav{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+ul{
+    list-style-type: none;
+}
+.nav li{
+    width: 6px;
+    height: 6px;
+    border: 2px solid #b1fcdf;
+    background-color: #b1fcdf;
+    border-radius: 50%;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+.nav li:hover, .nav li.selected{
+    transform: scale(1.3);
+    background-color: rgba(0,0,0,0);
 }
 p{
     color: #fff;
@@ -164,4 +203,39 @@ p{
 .overlay:target{
     visibility: visible;
     opacity: 1;
+}
+.closeButton{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    color: #bddfd6;
+    text-decoration: none;
+    font-weight: 900;
+    position: relative;
+    top: 10px;
+    right: 10px;
+}
+.wrapper{
+    width: 60%;
+    height: 60%;
+    background-color: #222e30;
+    position: fixed;
+    top: 20%;
+    bottom: 20%;
+    left: 20%;
+    right: 20%;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+.wrapper a{
+    color: #bddfd6;
+}
+.imageContainer img{
+    height: 80%;
+    margin: 10%;
+}
+.aboutAuthor{
+    width: 60%;
+    margin-left: 8%;
+    margin-top: 10%;
 }
